@@ -38,6 +38,7 @@ const styles = StyleSheet.create({
     signInText: {
         color: "white",
         fontSize: 18,
+        margin: 5,
     },
     signUpButton: {
         backgroundColor: 'pink',
@@ -66,6 +67,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center',
         marginTop: 20,
+        fontFamily: 'Roboto',
     },
     titleText: {
         color: 'black',
