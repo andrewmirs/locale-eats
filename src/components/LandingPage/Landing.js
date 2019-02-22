@@ -14,11 +14,11 @@ class Landing extends Component {
             <View style={styles.landingPage}>
                 <StatusBar barStyle="light-content" />
                 <View style={styles.title}>
-                    <Text style={styles.titleText}>Locale Eats</Text>
+                    <Text style={styles.titleText}>Local Eats</Text>
                 </View>
-                <View style={styles.subTitle}>
-                    <Text style={styles.subTitleText}>Grow your business with 3000</Text>
-                </View>
+                {/* <View style={styles.subTitle}>
+                    <Text style={styles.subTitleText}>Share the Whereabouts</Text>
+                </View> */}
                 <View style={styles.iconContainer}>
                     <Image 
                         style={styles.icon}
