@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import Generate from './src/components/Generator/Generator';
+import Input from './src/components/Input/Input';
 import Landing from './src/components/LandingPage/Landing';
 import ListItem from './src/components/Generator/ListItem';
 import Nav from './src/components/Nav/Nav';
@@ -35,8 +36,9 @@ class App extends Component {
       <View style={styles.container}>
         <Nav appName={this.state.appName} />
         <Generate add={this.onAddRandom} />
-
         <ListItem items={this.state.random} delete={this.onItemDelete} />
+
+        <Input />
       </View>
     );
   }
