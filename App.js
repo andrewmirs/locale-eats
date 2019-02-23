@@ -5,6 +5,7 @@ import Input from './src/components/Input/Input';
 import Landing from './src/components/LandingPage/Landing';
 import ListItem from './src/components/Generator/ListItem';
 import Nav from './src/components/Nav/Nav';
+import PickerComponent from './src/components/Picker/Picker';
 
 class App extends Component {
 
@@ -40,13 +41,14 @@ class App extends Component {
           // onContentSizeChange={(w,h) => alert(h)}
           // onMomentumScrollBegin={()=> alert('begin')}
           // onMomentumScrollEnd={()=> alert('end')}
-          onScroll={() => alert('scrollling')}
+          // onScroll={() => alert('scrollling')}
         >
           <View style={styles.wrapper}>
             <Generate add={this.onAddRandom} />
             <ListItem items={this.state.random} delete={this.onItemDelete} />
 
-            <Input />
+            {/* <Input /> */}
+            <PickerComponent />
           </View>
         </ScrollView>
       </View>
