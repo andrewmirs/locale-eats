@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text, View } from 'react-native';
 import Generate from './src/components/Generator/Generator';
 import Input from './src/components/Input/Input';
 import Landing from './src/components/LandingPage/Landing';
@@ -35,10 +35,20 @@ class App extends Component {
     return (
       <View style={styles.container}>
         <Nav appName={this.state.appName} />
-        <Generate add={this.onAddRandom} />
-        <ListItem items={this.state.random} delete={this.onItemDelete} />
+        <ScrollView 
+          style={{width: '100%'}}
+          // onContentSizeChange={(w,h) => alert(h)}
+          // onMomentumScrollBegin={()=> alert('begin')}
+          // onMomentumScrollEnd={()=> alert('end')}
+          onScroll={() => alert('scrollling')}
+        >
+          <View style={styles.wrapper}>
+            <Generate add={this.onAddRandom} />
+            <ListItem items={this.state.random} delete={this.onItemDelete} />
 
-        <Input />
+            <Input />
+          </View>
+        </ScrollView>
       </View>
     );
   }
@@ -51,7 +61,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'flex-start',
     marginTop: 20,
-  }
+  },
+  wrapper: {
+    flex: 1,
+    width: '100%',
+    padding: 20,
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+  },
 });
 
 export default App;
