@@ -4,6 +4,7 @@ import Generate from './src/components/Generator/Generator';
 import Input from './src/components/Input/Input';
 import Landing from './src/components/LandingPage/Landing';
 import ListItem from './src/components/Generator/ListItem';
+import ModalComponent from './src/components/Modal/Modal';
 import Nav from './src/components/Nav/Nav';
 import PickerComponent from './src/components/Picker/Picker';
 import Wingsuit from './assets/images/wingsuit.jpg';
@@ -56,12 +57,14 @@ class App extends Component {
               color="purple"
               animating={this.state.loading}
             /> */}
-            <Image 
+            {/* <Image 
               source={{uri: 'https://images.vailresorts.com/image/upload/c_scale,dpr_1.0,f_auto,q_auto,w_1000/v1/Whistler%20Blackcomb/Products/Home/Whistler%20Homepage%20Photo%20Image%20Promotion%203.png'}}
               style={styles.wingsuit}
               resizeMode="contain"
               onLoadEnd={() => alert('Image loaded')}
-            />
+            /> */}
+            <ModalComponent />
+
           </View>
         </ScrollView>
       </View>
